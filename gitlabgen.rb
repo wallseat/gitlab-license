@@ -28,5 +28,5 @@ license.restrictions = {
 # Export the license, which encrypts and encodes it.
 data = license.export
 
-puts "Exported license to file '#{company}.gitlab-license'"
-File.open("#{company}.gitlab-license", 'w') { |file| file.write(data) }
+puts "Exported license to file 'gitlab-license'"
+File.open("gitlab-license", 'w') { |file| file.write(data) }
