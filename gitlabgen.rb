@@ -9,7 +9,7 @@ File.open("/opt/gitlab/embedded/service/gitlab-rails/.license_encryption_key.pub
   |f| f.write(key_pair.public_key.to_pem) 
 }
 
-Gitlab::License.encryption_key = key_pair.to_pem
+Gitlab::License.encryption_key =  OpenSSL::PKey::RSA.new key_pair.to_pem
 
 # Build a new license.
 license = Gitlab::License.new
